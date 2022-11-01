@@ -43,18 +43,12 @@ const Dashboard = () => {
             <span><FontAwesomeIcon class=" h-4 w-4 " size="1x" icon={icon}></FontAwesomeIcon></span>
           </div>
      
-            <ul id="open" className='my-1 lg:ml-6 hidden'>
-              <li>Ecommerce</li>
-              <li>Sass</li>
-              <li>Crypto</li>
+            <ul id="open" className=' hidden leading-3'>
+              <li><a href="">Ecommerce</a></li>
+              <li><a href="">Saas</a></li>
+              <li><a href="">Crypto</a></li>
             </ul>
-    
-
-          {/* <div id="myDropdown" class="dropdown-content">
-                        <a href="#">Link 1</a>
-                        <a href="#">Link 2</a>
-                        <a href="#">Link 3</a>
-                    </div> */}
+  
           <p className='pt-2'>Applications</p>
           <ul className='leading-3 '>
             <li><a href="#"> <FontAwesomeIcon class=" h-4 w-4 " size="1x" icon={faCalendarDays}></FontAwesomeIcon>Calender</a></li>

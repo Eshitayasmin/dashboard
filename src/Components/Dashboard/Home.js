@@ -100,7 +100,7 @@ const Home = () => {
                             </div>
                         </div>
 
-                        <div className='w-8/12 flex justify-self-end h-full'>
+                        <div className='w-9/12 flex justify-center items-center'>
                             <img className='bar-chart ml-6' src="https://www.math-only-math.com/images/representation-bar-graph.png" alt="" />
                         </div>
                     </div>
