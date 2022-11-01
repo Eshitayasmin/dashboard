@@ -11,11 +11,10 @@ const Dashboard = () => {
   return (
     <div class="drawer drawer-mobile bg-gray-50">
       <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
-      <div class="drawer-content w-full h-full flex flex-col items-center bg-base-200">
+      <div class="drawer-content w-full h-full flex flex-col items-center bg-base-200 overflow-x-hidden">
         {/* <!-- Page content here --> */}
         <Navbar></Navbar>
-        <Outlet>
-        </Outlet>
+        <Outlet></Outlet>
       </div>
       <div class="drawer-side">
         <label for="my-drawer-2" class="drawer-overlay"></label>

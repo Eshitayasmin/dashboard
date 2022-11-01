@@ -7,7 +7,7 @@ import loading from "../../images/loading.png";
 
 const Home = () => {
     return (
-        <div className='w-full h-full flex mt-3 ml-6'>
+        <div className='w-full h-full flex mt-2 ml-6'>
             <div className='first-part w-9/12'>
                 <div className='first-section flex w-full'>
                     <div className='bg-white flex justify-between w-1/3 items-center p-3 rounded-md lg:mr-2'>
@@ -55,7 +55,7 @@ const Home = () => {
                 </div>
 
 
-                <div className='bg-white my-3 rounded-md p-3 w-full'>
+                <div className='bg-white mt-3 rounded-md p-3 w-full'>
                     <div className='flex justify-between'>
                         <p className='font-bold'>Overview</p>
                         <p className='flex items-center'><span className='font-bold pr-1'>Sort By:</span> Yearly <FontAwesomeIcon class=" h-3 w-3 pl-1" size="1x" icon={faAngleDown}></FontAwesomeIcon></p>
@@ -166,7 +166,7 @@ const Home = () => {
                                 </div>
 
                                 <div className='ml-3'>
-                                    <p className='text-sm text-gray-500'>Polo blue T-shirt</p>
+                                    <p className='text-md text-gray-500'>Polo blue T-shirt</p>
                                     <p className='font-bold text-sm'>$ 25.4</p>
 
                                 </div>
@@ -184,7 +184,7 @@ const Home = () => {
                                 </div>
 
                                 <div className='ml-3'>
-                                    <p className='text-sm text-gray-500'>Hoddie for men</p>
+                                    <p className='text-md text-gray-500'>Hoddie for men</p>
                                     <p className='font-bold text-sm'>$ 24.5</p>
 
                                 </div>
@@ -202,7 +202,7 @@ const Home = () => {
                             </div>
                        
                         <div className='ml-3'>
-                            <p className='text-sm text-gray-500'>Red color cap</p>
+                            <p className='text-md text-gray-500'>Red color cap</p>
                             <p className='font-bold text-sm'>$ 22.5</p>
                     
                        </div>
@@ -241,7 +241,7 @@ const Home = () => {
 
 
 
-            <div className='second-section w-3/12 bg-white mx-4 h-screen rounded-md'>
+            <div className='second-section w-3/12 bg-white mx-3 h-screen rounded-md'>
                 <div className='h-full w-full relative rounded-md'>
                     <img className='h-24 w-full rounded-md' src="https://www.epfl.ch/research/domains/bluebrain/wp-content/uploads/2020/10/FAQ_thumbnail-384x216.jpg" alt="" />
                     <img className='w-20 h-20 border-4 border-x-white rounded-full absolute top-12 left-28' src={eshu} alt="" />
