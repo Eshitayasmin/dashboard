@@ -55,7 +55,7 @@ const Home = () => {
                 </div>
 
 
-                <div className='bg-white mt-3 rounded-md p-3 w-full'>
+                <div className='bg-white mt-4 rounded-md p-3 w-full'>
                     <div className='flex justify-between'>
                         <p className='font-bold'>Overview</p>
                         <p className='flex items-center'><span className='font-bold pr-1'>Sort By:</span> Yearly <FontAwesomeIcon class=" h-3 w-3 pl-1" size="1x" icon={faAngleDown}></FontAwesomeIcon></p>
@@ -107,7 +107,7 @@ const Home = () => {
                 </div>
 
 
-                <div className='w-full flex pt-3'>
+                <div className='w-full flex pt-4 pb-4'>
                     <div className='bg-white p-3 w-1/3 rounded-md'>
                         <div className='flex justify-between'>
 
@@ -234,14 +234,11 @@ const Home = () => {
 
                 </div>
 
-
-
-
             </div>
 
 
 
-            <div className='second-section w-3/12 bg-white mx-3 h-screen rounded-md'>
+            <div className='second-section w-3/12 bg-white mx-3 rounded-md'>
                 <div className='h-full w-full relative rounded-md'>
                     <img className='h-24 w-full rounded-md' src="https://www.epfl.ch/research/domains/bluebrain/wp-content/uploads/2020/10/FAQ_thumbnail-384x216.jpg" alt="" />
                     <img className='w-20 h-20 border-4 border-x-white rounded-full absolute top-12 left-28' src={eshu} alt="" />
@@ -284,8 +281,8 @@ const Home = () => {
                         <p className='text-sm text-zinc-500'>Earning this month</p>
                         <p className='text-sm text-zinc-500 py-1'><span className='bg-green-100 text-green-600  rounded-md text-sm'>2.65%</span> from previous period</p>
                     </div>
-                    <div className='border border-gray-200 mx-3 my-3'></div>
-                    <div className='mx-3'>
+                    <div className='border border-gray-200 mx-3 mt-3'></div>
+                    <div className='px-3 py-4 bg-white rounded-lg'>
                         <p className='font-bold'>Recent Activity</p>
                         <div className='flex justify-between items-center my-4'>
                             <div className='bg-gray-100 px-3 py-1 rounded-md text-center'>
@@ -304,7 +301,7 @@ const Home = () => {
                                 <p className='text-blue-400 text-sm cursor-pointer'>Read more</p>
                             </div>
                         </div>
-                        <div className='flex justify-between items-center my-4'>
+                        <div className='flex justify-between items-center '>
                             <div className='bg-gray-100 px-3 py-1 rounded-md text-center'>
                                 <p className='text-md font-bold'>10</p>
                                 <p className='text-md font-bold'>Sep</p>

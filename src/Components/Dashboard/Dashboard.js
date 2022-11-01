@@ -1,12 +1,28 @@
 import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleDown, faGrip, faDumpster, faReceipt, faWifi, fa8, faOutdent, faPenToSquare } from '@fortawesome/free-solid-svg-icons';
+import { faAngleDown, faGrip, faDumpster, faReceipt, faWifi, fa8, faOutdent, faPenToSquare, faAngleUp } from '@fortawesome/free-solid-svg-icons';
 import "./Dashboard.css";
 import { faCalendarDays, faFile, faCommentDots, faEnvelope, faRectangleList, faUser, faCircleCheck } from '@fortawesome/free-regular-svg-icons';
 import Navbar from './Navbar';
+import { useState } from 'react';
 
 const Dashboard = () => {
+  const [icon, setIcon] = useState(faAngleDown);
+  const openToggle = () =>{
+   const toggleDiv= document.getElementById('open');
+   const toggleDash= document.getElementById('toggledash');
+   if (toggleDiv.style.display === "none") {
+    toggleDiv.style.display = "block";
+    toggleDash.style.color="white";
+    setIcon(faAngleUp)
+  } else {
+    toggleDiv.style.display = "none";
+    setIcon(faAngleDown);
+    toggleDash.style.color="gray";
+  }
+   return toggleDiv;
+  }
 
   return (
     <div class="drawer drawer-mobile bg-gray-50">
@@ -21,18 +37,25 @@ const Dashboard = () => {
         <div className="menu p-4 overflow-y-auto w-70  text-gray-500 side-bar bg-gray-900">
           {/* <!-- Sidebar content here --> */}
           <p>Menu</p>
-          <div className=' flex items-center hover:text-white'>
+          <div onClick={openToggle} id="toggledash" className=' flex items-center text-gray-500 hover:text-white'>
             <FontAwesomeIcon class="h-4 w-4 " size="1x" icon={faGrip}></FontAwesomeIcon>
             <p className='p-2'>Dashboard</p>
-            <span><FontAwesomeIcon class="dropbtn h-4 w-4 " size="1x" icon={faAngleDown}></FontAwesomeIcon></span>
+            <span><FontAwesomeIcon class=" h-4 w-4 " size="1x" icon={icon}></FontAwesomeIcon></span>
           </div>
+     
+            <ul id="open" className='my-1 lg:ml-6 hidden'>
+              <li>Ecommerce</li>
+              <li>Sass</li>
+              <li>Crypto</li>
+            </ul>
+    
 
           {/* <div id="myDropdown" class="dropdown-content">
                         <a href="#">Link 1</a>
                         <a href="#">Link 2</a>
                         <a href="#">Link 3</a>
                     </div> */}
-          <p>Applications</p>
+          <p className='pt-2'>Applications</p>
           <ul className='leading-3 '>
             <li><a href="#"> <FontAwesomeIcon class=" h-4 w-4 " size="1x" icon={faCalendarDays}></FontAwesomeIcon>Calender</a></li>
             <li ><div className='flex justify-between items-center'>
@@ -74,27 +97,27 @@ const Dashboard = () => {
             </div></li>
             <li>
               <div className='flex justify-between items-center'>
-              <Link className='flex items-center' path="#"><FontAwesomeIcon class=" h-4 w-4 mr-2" size="1x" icon={faCircleCheck}></FontAwesomeIcon>Utility</Link>
-              <span><FontAwesomeIcon class=" h-4 w-4" size="1x" icon={faAngleDown}></FontAwesomeIcon>
-              </span>
-            </div>
+                <Link className='flex items-center' path="#"><FontAwesomeIcon class=" h-4 w-4 mr-2" size="1x" icon={faCircleCheck}></FontAwesomeIcon>Utility</Link>
+                <span><FontAwesomeIcon class=" h-4 w-4" size="1x" icon={faAngleDown}></FontAwesomeIcon>
+                </span>
+              </div>
             </li>
           </ul>
           <p className='py-2'>Components</p>
           <ul className='leading-3 '>
             <li>
               <div className='flex justify-between items-center'>
-              <Link className='flex items-center' path="#"><FontAwesomeIcon class=" h-4 w-4 mr-2" size="1x" icon={faOutdent}></FontAwesomeIcon>UI Elements</Link>
-              <span><FontAwesomeIcon class=" h-4 w-4" size="1x" icon={faAngleDown}></FontAwesomeIcon>
-              </span>
-            </div>
+                <Link className='flex items-center' path="#"><FontAwesomeIcon class=" h-4 w-4 mr-2" size="1x" icon={faOutdent}></FontAwesomeIcon>UI Elements</Link>
+                <span><FontAwesomeIcon class=" h-4 w-4" size="1x" icon={faAngleDown}></FontAwesomeIcon>
+                </span>
+              </div>
             </li>
             <li>
               <div className='flex justify-between items-center'>
-              <Link className='flex items-center' path="#"><FontAwesomeIcon class=" h-4 w-4 mr-2" size="1x" icon={faPenToSquare}></FontAwesomeIcon>Forms</Link>
-              <span><FontAwesomeIcon class=" h-4 w-4" size="1x" icon={faAngleDown}></FontAwesomeIcon>
-              </span>
-            </div>
+                <Link className='flex items-center' path="#"><FontAwesomeIcon class=" h-4 w-4 mr-2" size="1x" icon={faPenToSquare}></FontAwesomeIcon>Forms</Link>
+                <span><FontAwesomeIcon class=" h-4 w-4" size="1x" icon={faAngleDown}></FontAwesomeIcon>
+                </span>
+              </div>
             </li>
           </ul>
         </div>
